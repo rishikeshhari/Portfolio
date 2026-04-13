@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishikesh Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&family=Sora:wght@400;600;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    padding-top: 80px; /* prevents navbar overlap */
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: #020617;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* HERO */
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+    url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    font-family: 'Sora', sans-serif;
+    color: #6fd4ff;
+}
+
+#home p {
+    font-size: 1.3rem;
+    color: #a5f3fc;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #1e293b;
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+/* PROJECT */
+.project-card {
+    background: #1e293b;
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    transition: 0.3s;
+    margin: auto;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+/* CONTACT */
+input, textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home h1 {
+        font-size: 2.2rem;
+    }
+
+    .project-card {
+        width: 95%;
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <h3>Rishikesh</h3>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+    <h1><span id="typing"></span></h1>
+    <p>AI & Data Science Engineer</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2><br>
+    <p>
+        I am a motivated B.Tech student specializing in Artificial Intelligence and Data Science with strong interest in building smart systems. I know Python, Java, JavaScript, C, C++ and web technologies like HTML, CSS, SQL. My goal is to become an AI Engineer.
+
+I am passionate about learning new technologies and continuously improving my technical skills. I enjoy working on real-world projects that involve problem-solving, data analysis, and intelligent system design. I am also interested in machine learning, deep learning, and full-stack development.
+
+I am a quick learner, a good team player, and always eager to take on new challenges that help me grow both technically and personally. I aim to contribute to innovative projects and make a meaningful impact in the field of AI and technology.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2><br>
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">C</div>
+        <div class="skill">C++</div>
+        <div class="skill">SQL</div>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section id="projects">
+    <div class="project-card">
+        <h2>Project</h2><br>
+        <h3 style="color:#6fd4ff;">ResQ - Emergency Ambulance System</h3><br>
+
+        <p style="text-align:left;">
+            ResQ helps users find nearest ambulances and request emergency help quickly.
+        </p><br>
+
+        <p style="text-align:left;"><strong>Features:</strong></p>
+        <ul style="text-align:left;">
+            <li>Real-time location tracking</li>
+            <li>Find nearest ambulance</li>
+            <li>Direct driver connection</li>
+            <li>One-click emergency request</li>
+        </ul><br>
+
+        <p><strong>Tech:</strong> HTML, CSS, JS</p><br>
+
+        <button onclick="openProject()">View Project</button>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2><br>
+
+    <p>Email:
+        <a href="mailto:rishikeshharik19@gmail.com">
+            rishikeshharik19@gmail.com
+        </a>
+    </p><br>
+
+    <p>LinkedIn:
+        <a href="https://www.linkedin.com/in/rishikesh-hari-ab96b9394" target="_blank">
+            Profile Link
+        </a>
+    </p>
+</section>
+
+<script>
+// Typing effect
+const text = "Rishikesh Hari K";
+let i = 0;
+
+function typing() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+    }
+}
+typing();
+
+// Open project
+function openProject() {
+    window.open("https://resq-project.lovable.app/", "_blank");
+}
+</script>
+
+</body>
+</html>
